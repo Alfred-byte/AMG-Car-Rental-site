@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:5500/dex.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMG Car Rental</title>
+    <link rel="stylesheet" href="./AMG Car Rental Site_files/index.css">
+</head>
+<body>
+    <!--Navigation-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                AMG <span>CAR Rental</span>
+            </div>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:5500/dex.html#home">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/dex.html#cars">Cars</a></li>
+                <li><a href="http://127.0.0.1:5500/dex.html#about">About</a></li>
+                <li><a href="http://127.0.0.1:5500/dex.html#contact">Contact</a></li>
+            </ul>
+            <a href="http://127.0.0.1:5500/dex.html#booking" class="nav-button">Book Now</a>
+        </nav>
+    </header>
+    <!--Section-->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="small-title">Welcome to AMG CAR RENTAL</p> <h1>
+                Rent Your Dream Car
+                <span>Toady.</span>
+                <p>Affordable, reliable and comfortable cars for every journey</p>
+                <div class="hero-buttons">
+                    <a href="http://127.0.0.1:5500/dex.html#cars" class="btn">View Cars</a>
+                    <a href="http://127.0.0.1:5500/dex.html#bookings" class="btn-outline">Book Now</a>
+                </div>
+            </h1>
+        </div>
+    </section>
+    <!--cars Section-->
+    <section id="cars" class="cars-section">
+        <div class="section-title">
+            <p>OUR CARS</p>
+            <h2>Choose Your Ride</h2>
+        </div>
+        <div class="car-filters">
+                <button onclick="filterCars('all')">All</button>
+                <button onclick="filterCars('sedan')">Sedan</button>
+                <button onclick="filterCars('suv')">SUV</button>
+            </div>
+
+        <div class="cars-container">
+             <div class="car-card" data-category="suv">
+                <div class="car-image">
+                    <img src="./AMG Car Rental Site_files/Range rover.jpg" alt="Range Rover">
+                </div>
+                <div class="car-info">
+                    <h3>Range Rover Sport 2021</h3>
+                    <p>SUV. Automatic . 5 seats</p>
+                    <div class="car-bottom">
+                        <strong>1000 / day</strong>
+                    <button onclick="selectCar('Range Rover')">Book</button>
+                    </div>
+                </div>
+            </div>
+             <div class="car-card" data-category="sedan">
+                <div class="car-image">
+                    <img src="./AMG Car Rental Site_files/bmw 1.jpg" alt=" Luxury BMW">
+                </div>
+                <div class="car-info">
+                    <h3>BMW X6 Series</h3>
+                    <p>luxury Sedan . Automatic . 5 seats</p>
+                    <div class="car-bottom">
+                        <strong>800/ day</strong>
+                    <button onclick="selectCar('BMW X6 Series')">Book</button>
+                    </div>
+                </div>
+            </div>
+             <div class="car-card" data-category="suv">
+                <div class="car-image">
+                    <img src="./AMG Car Rental Site_files/gle 2.jpg" alt="Mercedes Benz Gle">
+                </div>
+                <div class="car-info">
+                    <h3>Mercedes-Benz GLE  </h3>
+                    <p>SUV. Automatic . 5 seats</p>
+                    <div class="car-bottom">
+                        <strong>1200 / day</strong>
+                    <button onclick="selectCar('Mercedes-Benz GLE')">Book</button>
+                    </div>
+                </div>
+            </div>
+             <div class="car-card" data-category="suv">
+                <div class="car-image">
+                    <img src="./AMG Car Rental Site_files/Toyota.jpg" alt="Toyota Land Cruiser">
+                </div>
+                <div class="car-info">
+                    <h3>Toyota Land Cruiser</h3>
+                    <p>SUV . Automatic . 7 seats</p>
+                    <div class="car-bottom">
+                        <strong>700 / day</strong>
+                    <button onclick="selectCar('Toyota Land Cruiser')">Book</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!---About Section-->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <p>WHY AMG?</p>
+            <h2>Drive with Confidence</h2>
+            <p>AMG Car Rental provides quality and reliable vehicles for business trips, vacations, weddings and everyday travel.</p>
+
+        </div>
+    </section>
+    <section id="booking" class="booking-section">
+        <div class="section-title">
+            <p>RESERVATION</p>
+            <h2>Book Your Car</h2>
+        </div>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Name" required="">
+            <input type="tel" id="phone" placeholder="Phone Number" required="">
+       
+        <select id="car" required="">
+            <option value="">Select a car</option>
+            <option value="BMW X6 Series">BMW X6 Series</option>
+            <option value="Mercedes-Benz GLE">Mercedes-Benz GLE</option>
+            <option value="Toyota Land Cruiser">Toyota Land Cruiser</option>
+            <option value="Range Rover">Range Rover </option>
+        </select>
+        <label>Pickup Date</label>
+        <input type="date" id="pickup" required="">
+        <label>Return Date</label>
+        <input type="date" id="return" required="">
+        <button type="submit" class="submit-btn">Calculate Price</button>
+         </form>
+         <div id="result"></div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <p>CONTACT US</p>
+            <h2>Let's Get You Moving</h2>
+        </div>
+        <p>+233240160705</p>
+        <p><a href="http://127.0.0.1:5500/alfreddonkor88@gmail.com"></a></p>
+        <p>Accra, Ghana</p>
+        <a href="https://wa.me/233240160705" class="whatsapp-btn" target="_blank">Chat With Us on WhatsApp</a>
+    </section>
+    <footer>
+        <p>© 2026 AMG Car Rental . All Right Reserved .</p>
+    </footer>
+    <script src="./AMG Car Rental Site_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

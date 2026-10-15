@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    list-style: 1.6;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.9);
+}
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+.logo span {
+    font-size: 12px;
+    display: block;
+    letter-spacing: 3px;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.nav-links a {
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #f5b400;
+}
+.nav-button {
+    background: #f5b400;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(0,0,0,0.65), rgba(0,0,0,0.75);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 120px 8%;
+}
+.hero-content {
+    max-width: 650px;
+}
+.small-title {
+    color: #f5b400;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+.hero h1 span {
+    color: #f5b400;
+}
+.hero p {
+    font-size: 18px;
+    color: #ddd;
+}
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+.btn {
+    background: #f5b400;
+    color: black;
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h2 {
+    font-size: 40px;
+}
+.cars-section {
+    padding: 100px 8%;
+}
+.cars-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+}
+.car-card {
+    background: #151515;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.car-card:hover {
+    transform: translate(-8px);
+}
+.car-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.car-info {
+    padding: 20px;
+}
+.car-info h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+.car-info p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+.car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.car-bottom strong {
+    color: #f5b400;
+}
+.car-bottom button {
+    background: #f5b400;
+    border: none;
+    padding: 9px 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.about-section {
+    padding: 100px 8%;
+    background: #151515;
+    text-align: center;
+}
+.about-content {
+    max-width: 750px;
+    margin: auto;
+}
+.about-content > p:first-child {
+    color: #f5b400;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.about-content h2 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+.about-content p:last-child {
+    color: #ccc;
+}
+.booking-section {
+    padding: 100px 8%;
+}
+#bookingForm {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#bookingForm input, #bookingForm select {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#bookingForm label {
+    color: #ccc;
+    margin-top: 5px;
+}
+.submit-btn {
+    padding: 15px;
+    background: #f5b400;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#result {
+    max-width: 600px;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 20px;
+    color: #f5b400;
+}
+.contact-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: #151515;
+}
+.contact-section p {
+    margin: 10px;
+    color: #ccc;
+}
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #25D366;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background: black;
+    color: #888;
+}
+@media (max-width: 800px) {
+    .nav-links{
+        display: none;
+    }
+    .hero h1 {
+        font-size: 45px;
+    }
+    .cars-container {
+        grid-template-columns: 1fr;
+    }
+    .section-title h2 {
+        font-size: 32px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        max-width: 200px;
+    }
+    
+}
+/* =========================
+   CAR FILTERS
+========================= */
+
+.car-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.car-filters button {
+    padding: 12px 25px;
+    border: 1px solid #f5b400;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.car-filters button:hover {
+    background: #f5b400;
+    color: black;
+}
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+/* Mobile screens */
+@media (max-width: 800px) {
+    .navbar {
+        position: relative;
+    }
+    .menu-btn{
+        display: block;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 15px;
+        border-bottom: 1px solid #333;
+    }
+    .nav-button {
+        display: none;
+    }
+    
+}
